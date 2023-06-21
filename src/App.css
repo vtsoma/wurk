@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@import "./assets/fonts/css/panchang.css";
+* {
+  margin: 0px;
+  padding: 0px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.topbar {
+  backdrop-filter: blur(5px);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 62px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+.topbar .logo {
+  height: 100%;
+  text-align: center;
+  display: inherit;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  color: white;
+  font-family: "Panchang";
+}
+.topbar .account {
+  width: 50px;
+  height: 50px;
+  background-color: #02111b;
+  border-radius: 50%;
+  margin-right: 30px;
+  display: inherit;
+  justify-content: center;
+}
+.topbar .account img {
+  width: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main {
+  padding-top: 62px;
 }
+main h1 {
+  font-family: Panchang;
+}
+main h1:after {
+  content: url("./assets/icons/line.svg");
+  float: right;
+}
+main .main-text {
+  font-family: Panchang-Bold;
+  font-size: 80px;
+}
+
+/*# sourceMappingURL=App.css.map */
