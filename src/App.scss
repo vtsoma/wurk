@@ -1,8 +1,11 @@
 @import "./assets/fonts/css/panchang.css";
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+@import './styles/keyframes.scss';
 
 * {
-  margin: 0px;
-  padding: 0px;
+  margin:0;
+  padding: 0;
 
   color: white;
 }
@@ -16,7 +19,7 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
 
   position: fixed;
-  top: 0px;
+  top: 0;
 
   width: 100vw;
   height: 62px;
@@ -34,7 +37,7 @@
     align-items: center;
     justify-content: center;
 
-    margin-left: 30px;
+    margin-left: 70px;
 
     color: white;
     font-family: "Panchang";
@@ -47,7 +50,7 @@
     background-color: #02111b;
     border-radius: 50%;
 
-    margin-right: 30px;
+    margin-right: 70px;
     display: inherit;
 
     justify-content: center;
@@ -61,12 +64,54 @@
 main {
   padding-top: 62px;
 
+  p {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 20px;
+  }
+
+  article {
+    margin-left: 70px;
+    margin-top: 50px;
+    user-select: none;
+
+    .desc-text {
+      margin-left: 0;
+      margin-top: 20px;
+
+      &:first-of-type {
+        margin-top: 40px;
+      }
+
+      &:before {
+        content: "> ";
+      }
+
+      &:last-of-type:after {
+        content: " _";
+
+        animation: .6s blink infinite steps(1);
+      }
+    }
+
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 20px;
+      width: 1000px;
+    }
+  }
+
   h1 {
-    font-family: Panchang;
+    font-family: Panchang-Bold;
 
     &:after {
-      content: url('./assets/icons/line.svg');
-      float: right;
+      display: inline-block;
+      position: relative;
+      float: end;
+      content: url('./assets/images/after-thingy.svg');
+      height: 90px;
+      width: 400px;
+      bottom: -17px;
     }
   }
 
